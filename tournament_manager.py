@@ -60,10 +60,3 @@ def generate_game_plan(teams, round):
     teams.sort(key=lambda x: x.wins)
     for i in range(len(teams)//2):
         print(f"Home: {teams[i].name} VS Away: {teams[-i-1].name}")
-
-
-number_of_teams = get_number_of_teams()
-teams = create_teams(number_of_teams)
-games_played = get_number_games_played(number_of_teams)
-set_team_wins(teams, games_played)
-generate_game_plan(teams, "first")
